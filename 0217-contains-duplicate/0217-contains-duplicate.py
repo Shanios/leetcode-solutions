@@ -1,15 +1,14 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        slow =  0
-        nums.sort()
+
+        seen = set()
         
-        for fast in range(1,len(nums)):
+        for fast in range(0,len(nums)):
          
-          if nums[fast] == nums[slow]:
+          if nums[fast] in seen:
             return True
           else:
-           fast +=1  
-          slow +=1  
+           seen.add(nums[fast]) 
         return False    
             
 
