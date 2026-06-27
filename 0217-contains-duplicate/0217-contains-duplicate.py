@@ -3,12 +3,10 @@ class Solution:
 
         seen = set()
         
-        for fast in range(0,len(nums)):
-         
-          if nums[fast] in seen:
-            return True
-          else:
-           seen.add(nums[fast]) 
-        return False    
+        for num in nums:
+          if num in seen:
+                return True
+          seen.add(num)
+        return False  
             
 
